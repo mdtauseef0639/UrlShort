@@ -26,5 +26,5 @@ def short_url():
 
 @short.route('/<code>')
 def redirect_to_url(code):
-    link = SL.query.filter_by(code=code).first_or_404()
+    link = SL.query.filter_by(code_=code).first_or_404()
     return redirect(link.url)
